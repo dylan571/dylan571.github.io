@@ -1,0 +1,138 @@
+/* --- BASE --- */
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #f8fafc; /* Blanco azulado suave */
+    margin: 0;
+    padding: 0;
+    background-color: #0f172a; /* Azul Marino Base */
+}
+
+/* --- CABECERA --- */
+
+.header-main {
+    background-color: #020617; /* Azul profundo */
+    box-shadow: 0px 4px 15px rgba(32, 178, 170, 0.4);
+    padding: 20px;
+    border-bottom: 1px solid rgba(32, 178, 170, 0.2);
+}
+
+.title-main {
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    font-size: 36px;
+    margin: 0px;
+}
+
+.nav-main {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    font-size: 20px;
+    margin-top: 25px;
+}
+
+a {
+    color: #cbd5e1;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+a:hover {
+    color: lightseagreen;
+}
+
+/* --- CONTENEDOR --- */
+
+.main-container-about-me {
+    background: linear-gradient(180deg, #0f172a 0%, #1e293b 100%);
+    border-top: 3px solid rgba(32, 178, 170, 0.5);
+}
+
+/* --- CONTENEDOR MAIN ABOUT ME --- */
+
+.main-container-about-me {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: #1e293b; /* Azul pizarra para contraste */
+    padding: 20px;
+}
+
+.content-about-me, .content-about-me-text {
+    background-color: #0f172a;
+    border: 1px solid rgba(32, 178, 170, 0.2);
+    font-size: 20px;
+    margin: 20px;
+    border-radius: 12px;
+    padding: 25px;
+    transition: 0.3s;
+    text-align: justify;
+}
+
+.second-header, .second-header-about-me {
+    display: flex;
+    justify-content: center;
+    color: #ffffff;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.content-about-me:hover, .content-about-me-text:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 20px rgba(32, 178, 170, 0.4);
+}
+
+.second-header-about-me {
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.content-about-me-text {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+    background-color: #0f172a;
+    font-size: 20px;
+    margin: 20px;
+    border-radius: 8px;
+    padding: 25px;
+    text-align: justify;
+}
+
+.side-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 260px;
+}
+
+.side-right {
+    text-align: justify;
+}
+
+.content-about-me-text:hover {
+    text-decoration: none;
+    transform: scale(1.02);
+    transition: 0.3s;
+    box-shadow: lightseagreen 0px 0px 15px;
+}
+
+/* --- IMAGENES --- */ 
+.img-proyect {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    padding: 10px;
+}
+
+/* --- FOOTER --- */
+footer {
+    background-color: #020617;
+    color: #94a3b8;
+    text-align: center;
+    padding: 40px;
+    border-top: 1px solid rgba(32, 178, 170, 0.2);
+}

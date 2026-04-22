@@ -11,7 +11,7 @@ body {
 
 .header-main {
     background-color: #020617; /* Azul profundo */
-    box-shadow: 0px 4px 15px rgba(32, 178, 170, 0.4);
+    box-shadow: 0px 4px 15px #10B981;
     padding: 20px;
     border-bottom: 1px solid rgba(32, 178, 170, 0.2);
 }
@@ -42,9 +42,47 @@ a:hover {
     color: lightseagreen;
 }
 
+/* --- primer-contenedor --- */
+.title-highlighted {
+    color: #10B981;
+    font-weight: bold;
+}
+
+/* --- opacidad --- */
+
+.opacity {
+    opacity: 0.7;
+}
+
+/* --- slogan --- */
+.slogan {
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 60px;
+    padding: 80px;
+    padding-bottom: 20px;
+    line-height: 1.1;
+}
+
+.paragraph-below-slogan {
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 18px;
+    padding-left: 80px;
+    line-height: 1.1;
+    opacity: 0.7;
+}
+
+.img-projects {
+    padding: 80px;
+    padding-top: 30px;
+}
 
 /* --- FOOTER --- */
-
 footer {
     background-color: #020617;
     color: #94a3b8;
@@ -52,4 +90,3 @@ footer {
     padding: 40px;
     border-top: 1px solid rgba(32, 178, 170, 0.2);
 }
-
