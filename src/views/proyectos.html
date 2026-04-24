@@ -1,100 +1,106 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/src/css/stylesproyects.css">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proyectos</title>
+  <link rel="stylesheet" href="../css/stylesproyects.css">
 </head>
 
 <body>
-    <header class="header-main">
-        <nav>
-            <h1 class="title-main">studio<span class="title-second-word">portafolio</span></h1>
-            <div class="nav-main">
-                <section><a href="/src/views/sobre-mi.html">sobre mí</a></section>
-                <section><a href="/index.html">portafolio</a></section>
-                <section><a href="/src/views/contacto.html">contacto</a></section>
-                <section><a href="/src/views/mascotas.html">mascotas</a></section>
-            </div>
-        </nav>
-    </header>
-    <main>
-        <section class="hero">
-            <div class="hero-text">
-                <span class="opacity"> ESTABLISHED 2026</span>
-                <div>
-                    <div class="slogan">
-                        <span>construido con precision.</span>
-                        <div>
-                            <span class="title-highlighted">diseñado</span>
-                            <span>para escala.</span>
-                        </div>
-                    </div>
-                    <div>
-                        <p class="paragraph-below-slogan">
-                            creo que la excelencia nace de lo pequeño.
-                            por eso, cada proyecto es una pieza de relojería
-                            técnica diseñada para expandirse sin límites.</p>
-                    </div>
-                    <div>
-                        <a href="#projects" class="btn">ver proyectos</a>
-                        <a href="contacto.html" class="btn-2">contactarme</a>
-                    </div>
-                </div>
-            </div>
-            <div class="hero-image">
-                <img src="/public/img/codigo.jpg" alt="projects">
-            </div>
-        </section>
-        <section id="projects">
-            <div class="hero-text">
-                <span class="opacity">TRABAJO</span>
-                <div class="projects-main-title">
-                    <span>proyectos</span>
-                </div>
-                <section class="projects-links">
-                    <a href="https://github.com/dylan571/EjemploInventarioRiwi.git" class="article-projects-one">
-                        <div class="project-image">📋</div>
-                        <div class="project-info">
-                            <span class="category">software</span>
-                            <span>inventario</span>
-                            <span>aplicacion de consola para el manejo de productos de un inventario.</span>
-                        </div>
-                    </a>
-                    <a href="https://github.com/dylan571/EjemploInventarioRiwi.git" class="article-projects-one">
-                        <div class="project-image">📋</div>
-                        <div class="project-info">
-                            <span class="category">software</span>
-                            <span>inventario</span>
-                            <span>aplicacion de consola para el manejo de productos de un inventario.</span>
-                        </div>
-                    </a>
-                    <a href="https://github.com/dylan571/EjemploInventarioRiwi.git" class="article-projects-one">
-                        <div class="project-image">📋</div>
-                        <div class="project-info">
-                            <span class="category">software</span>
-                            <span>inventario</span>
-                            <span>aplicacion de consola para el manejo de productos de un inventario.</span>
-                        </div>
-                    </a>
-                    <a href="https://github.com/dylan571/EjemploInventarioRiwi.git" class="article-projects-one">
-                        <div class="project-image">📋</div>
-                        <div class="project-info">
-                            <span class="category">software</span>
-                            <span>inventario</span>
-                            <span>aplicacion de consola para el manejo de productos de un inventario.</span>
-                        </div>
-                    </a>
-                </section>
-            </div>
-        </section>
-    </main>
 
-    <footer>
-        <p>© 2024 Dylan. Todos los derechos reservados.</p>
-    </footer>
+<header class="header-main">
+  <nav>
+    <h1 class="title-main">
+      studio <span class="title-second-word">portafolio</span>
+    </h1>
+
+    <!-- botón hamburguesa -->
+    <button class="menu-toggle" id="menu-toggle">☰</button>
+
+    <div class="nav-main" id="nav">
+      <a href="sobre-mi.html">sobre mí</a>
+      <a href="../index.html">portafolio</a>
+      <a href="contacto.html">contacto</a>
+      <a href="mascotas.html">mascotas</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-text">
+      <span class="opacity">ESTABLISHED 2026</span>
+
+      <div class="slogan">
+        <span>construido con precisión.</span>
+        <div>
+          <span class="title-highlighted">diseñado</span>
+          <span>para escala.</span>
+        </div>
+      </div>
+
+      <p class="paragraph-below-slogan">
+        creo que la excelencia nace de lo pequeño.
+        cada proyecto es una pieza técnica diseñada para escalar.
+      </p>
+
+      <a href="#projects" class="btn">ver proyectos</a>
+      <a href="contacto.html" class="btn-2">contactarme</a>
+    </div>
+
+    <div class="hero-image">
+      <img src="/public/img/codigo.jpg" alt="proyectos">
+    </div>
+  </section>
+
+  <!-- PROYECTOS -->
+  <section id="projects">
+    <span class="opacity">TRABAJO</span>
+    <h2 class="projects-main-title">proyectos</h2>
+
+    <div class="projects-links">
+
+      <a href="https://github.com/dylan571/EjemploInventarioRiwi.git" class="article-projects-one">
+        <div class="project-image">📋</div>
+        <div class="project-info">
+          <span class="category">software</span>
+          <h3>inventario</h3>
+          <p>aplicación de consola para manejo de productos.</p>
+        </div>
+      </a>
+
+      <a href="#" class="article-projects-one">
+        <div class="project-image">💻</div>
+        <div class="project-info">
+          <span class="category">web</span>
+          <h3>portafolio</h3>
+          <p>sitio web personal responsive con HTML, CSS y JS.</p>
+        </div>
+      </a>
+
+      <a href="#" class="article-projects-one">
+        <div class="project-image">📊</div>
+        <div class="project-info">
+          <span class="category">data</span>
+          <h3>dashboard</h3>
+          <p>visualización de datos interactiva.</p>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p>© 2026 Dylan. Todos los derechos reservados.</p>
+</footer>
+
+<!-- ✅ JS correcto -->
+<script src="../js/script.js"></script>
+
 </body>
-
 </html>

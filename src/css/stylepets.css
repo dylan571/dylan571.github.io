@@ -1,157 +1,172 @@
-/* --- BASE --- */
-body {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: #f8fafc; /* Blanco azulado suave */
-    margin: 0;
-    padding: 0;
-    background-color: #0f172a; /* Azul Marino Base */
+:root {
+  --bg-main: #0f172a;
+  --bg-header: #020617;
+  --accent: lightseagreen;
+  --text: #f8fafc;
 }
 
-/* --- CABECERA --- */
+/* --- BASE --- */
+body {
+  font-family: 'Franklin Gothic Medium', Arial, sans-serif;
+  color: var(--text);
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-main);
+}
 
+/* --- HEADER --- */
 .header-main {
-    background-color: #020617; /* Azul profundo */
-    box-shadow: 0px 4px 15px rgba(32, 178, 170, 0.4);
-    padding: 20px;
-    border-bottom: 1px solid rgba(32, 178, 170, 0.2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--bg-header);
+  padding: 1.25rem;
+  box-shadow: 0px 4px 15px rgba(32, 178, 170, 0.4);
+  position: relative;
+  z-index: 2000;
 }
 
 .title-main {
-    display: flex;
-    justify-content: center;
-    color: #fff;
-    font-size: 36px;
-    margin: 0px;
+  font-size: 2.25rem;
+  margin: 0;
+  color: white;
 }
 
+/* NAV */
 .nav-main {
-    display: flex;
-    justify-content: center;
-    gap: 25px;
-    font-size: 20px;
-    margin-top: 25px;
+  display: flex;
+  gap: 1.5rem;
+  font-size: 1.25rem;
 }
 
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* LINKS */
 a {
-    color: #cbd5e1;
-    transition: 0.3s;
-    text-decoration: none;
+  color: #cbd5e1;
+  text-decoration: none;
+  transition: 0.3s;
 }
 
 a:hover {
-    color: lightseagreen;
+  color: var(--accent);
 }
 
-/* --- TITULO Y CONTENEDOR */
-
+/* --- CONTENEDOR --- */
 .pets-gallery-container {
-    background: linear-gradient(180deg, #0f172a 0%, #1e293b 100%);
-    border-top: 3px solid rgba(32, 178, 170, 0.5);
+  background: linear-gradient(180deg, var(--bg-main) 0%, #1e293b 100%);
+  border-top: 3px solid rgba(32, 178, 170, 0.5);
 }
 
 .pets-gallery-title {
-    display: flex;
-    justify-content: center;
-    color: lightseagreen;
-    font-size: 32px;
-    margin: 30px;
+  text-align: center;
+  color: var(--accent);
+  font-size: 2rem;
+  margin: 2rem;
 }
 
-/* --- GALERIA MASCOTAS */
+/* --- GALERÍA --- */
 .pets-gallery {
-    display: grid;
-    grid-template-columns: repeat(3, 250px);
-    gap: 30px;
-    justify-content: center;
-}
-
-.img-pet {
-    width: 250px;
-    height: 350px;
-    margin: 0;
-    transition: transform 0.3s;
-    object-fit: cover;
-    border-radius: 15px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* PC */
+  gap: 20px;
+  padding: 20px;
 }
 
 /* --- TARJETAS --- */
-
 .flip-card {
-    background-color: transparent;
-    width: 250px;
-    height: 350px;
-    perspective: 1000px;
+  width: 100%;
+  max-width: 280px;
+  aspect-ratio: 3 / 4;
+  margin: 0 auto;
 }
 
 .flip-card-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-    transform-style: preserve-3d;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
 }
 
 .flip-card:hover .flip-card-inner {
-    transform: rotateY(180deg);
+  transform: rotateY(180deg);
 }
 
 .flip-card-front,
 .flip-card-back {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 15px;
-    backface-visibility: hidden;
-    overflow: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  backface-visibility: hidden;
+  overflow: hidden;
 }
 
 .flip-card-front img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .flip-card-back {
-    background: linear-gradient(45deg, #252525, #333);
-    border: 2px solid rgba(32, 178, 170, 0.2);
-    color: #f8fafc;
-    padding: 25px;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    transform: rotateY(180deg);
-}
-
-.title-flip-card-back {
-    margin-bottom: 12px;
-    font-size: 1.5rem;
-    color: lightseagreen;
-    font-weight: bold;
-}
-
-.flip-card,
-.flip-card-front,
-.flip-card-back,
-.flip-card-front img {
-    border-radius: 15px;
-}
-
-.flip-card-front,
-.flip-card-back {
-    overflow: hidden;
+  background: #252525;
+  color: white;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform: rotateY(180deg);
+  text-align: center;
 }
 
 /* --- FOOTER --- */
-
 footer {
-    background-color: #020617;
-    color: #94a3b8;
+  background-color: var(--bg-header);
+  color: #94a3b8;
+  text-align: center;
+  padding: 2rem;
+}
+
+/* --- RESPONSIVE --- */
+
+@media (max-width: 768px) {
+  .pets-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-main {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    background-color: var(--bg-header);
+    padding: 20px 0;
+    z-index: 1000;
     text-align: center;
-    padding: 40px;
-    border-top: 1px solid rgba(32, 178, 170, 0.2);
+  }
+
+  .nav-main.active {
+    display: flex;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .pets-gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }

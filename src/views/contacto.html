@@ -1,25 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/src/css/styles.css">
-    <title>Document</title>
+    <title>Contacto</title>
+    <link rel="stylesheet" href="/src/css/stylescontact.css">
 </head>
+
 <body>
-    <header class="header-main">
-        <h1 class="title-main">dylan</h1>
-        <nav class="nav-main">
-            <section><a href="/src/views/sobre-mi.html">sobre mí</a></section>
-            <section><a href="/src/views/proyectos.html">proyectos</a></section>
-            <section><a href="/index.html">portafolio</a></section>
-            <section><a href="/src/views/mascotas.html">mascotas</a></section>
-        </nav>
-    </header>
 
+<header class="header-main">
+    <nav>
+        <h1 class="title-main">
+            studio <span class="title-second-word">portafolio</span>
+        </h1>
 
-    <footer>
-        <p>© 2024 Dylan. Todos los derechos reservados.</p>
-    </footer>
+        <button class="menu-toggle" id="menu-toggle">☰</button>
+
+        <div class="nav-main" id="nav">
+            <a href="sobre-mi.html">sobre mí</a>
+            <a href="index.html">portafolio</a>
+            <a href="proyectos.html">proyectos</a>
+            <a href="mascotas.html">mascotas</a>
+        </div>
+    </nav>
+</header>
+
+<main class="contact-container">
+
+    <section class="contact-card">
+        <h2>Contáctame</h2>
+
+        <form id="contact-form">
+            <input type="text" id="nombre" placeholder="Tu nombre" required>
+            <input type="email" id="email" placeholder="Tu correo" required>
+            <textarea id="mensaje" placeholder="Tu mensaje" required></textarea>
+
+            <button type="submit" class="btn">Enviar mensaje</button>
+        </form>
+
+        <p id="respuesta" class="respuesta"></p>
+    </section>
+
+</main>
+
+<footer>
+    <p>© 2024 Dylan. Todos los derechos reservados.</p>
+</footer>
+
+<script src="/src/js/script.js"></script>
+
 </body>
 </html>

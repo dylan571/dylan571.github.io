@@ -1,91 +1,88 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/src/css/stylesaboutme.css">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sobre mí</title>
+  <link rel="stylesheet" href="/src/css/stylesaboutme.css">
 </head>
+
 <body>
-    <header class="header-main">
-        <h1 class="title-main">dylan</h1>
-        <nav class="nav-main">
-            <section><a href="/index.html">portafolio</a></section>
-            <section><a href="/src/views/proyectos.html">proyectos</a></section>
-            <section><a href="/src/views/contacto.html">contacto</a></section>
-            <section><a href="/src/views/mascotas.html">mascotas</a></section>
-        </nav>
-    </header>
-<div class="main-container-about-me">
-    <div class="content-about-me">
-        <h2 class="second-header">sobre mí</h2>
-        <p>hola, mi nombre es <strong>Dylan</strong>, 
-            Soy un programador aprendiz en Riwi, 
-            me gusta la pizza y los videojuegos, 
-            tambien veo anime y me apasiona el rock alternativo y el rap.
-        </p>
-    </div>
-    <div class="content-about-me-text">
-            <img src="/public/img/programmer.png" alt="Progammer icon" class="img-proyect"> 
-        <div>
-            <p>
-                me gusta programar porque me enseña algo nuevo 
-                sobre el futuro,
-                bien se sabe que la tecnologia avanza a pasos agigantados 
-                y es importante estar al tanto de las nuevas tendencias,
-                ademas de que es un pasatiempo divertido y gratificante,
-                me gusta crear cosas nuevas y resolver problemas, 
-                y la programacion me permite hacer eso de una manera creativa 
-                y desafiante.
-            </p>
-        </div>
-    </div>
-    <div class="content-about-me-text">
-        <div>
-            <h2 class="second-header-about-me">musica</h2>
-            <img src="/public/img/can.jpeg" alt="Apa and can" class="img-proyect"> 
-        </div>
 
-        <div class="side-right">
-            <p>
-                me apasiona la musica, me gusta escuchar rock alternativo y rap,
-                me gusta ver anime, mi favorito siendo "Solo Leveling",
-                me gusta jugar videojuegos, mi favorito siendo "League of Legends",
-                y me gusta la pizza, mi favorita siendo la cuatro quesos.
-                <br>
-                <br>
-                cuando se trata de musica, me gusta escuchar canciones que me hagan sentir algo,
-                ya sea felicidad, tristeza, nostalgia o motivacion,
-                me gusta la musica que tiene letras profundas y significativas,
-                y que me haga reflexionar sobre la vida y el mundo en general, como "Y la felicidad qué?" 
-                de Tirone González conocido artísticamente como Canserbero.
-            </p>
-        </div>
-        
-    </div>
-    <div class="content-about-me-text">
-        <div>
-            <img src="/public/img/iconlol.png" alt="lol icon" class="img-proyect"> 
-        </div>
+<header class="header-main">
+  <nav>
+    <h1 class="title-main">
+      studio <span class="title-second-word">portafolio</span>
+    </h1>
 
-        <div class="side-right">
-            <h2 class="second-header-about-me">videojuegos</h2>
-            <p>
-                como dije anteriormente, me gusta jugar videojuegos, mi favorito siendo "League of Legends",
-                 es un juego de estrategia en tiempo real que se juega en equipo, 
-                 me gusta porque es un juego muy competitivo y desafiante, 
-                 y me gusta jugar con mis amigos y competir contra otros jugadores de todo el mundo.
-                <br>
-                <br>
-                me gusta jugar videojuegos porque me permiten escapar de la realidad y sumergirme en un mundo virtual,
-                me gusta la sensación de logro que siento cuando gano una partida o logro un objetivo en el.
-            </p>
-        </div>
+    <button class="menu-toggle" id="menu-toggle">☰</button>
+
+    <div class="nav-main" id="nav">
+      <a href="/index.html">portafolio</a>
+      <a href="proyectos.html">proyectos</a>
+      <a href="contacto.html">contacto</a>
+      <a href="mascotas.html">mascotas</a>
     </div>
-</div>
-</div>
-    <footer>
-        <p>© 2024 Dylan. Todos los derechos reservados.</p>
-    </footer>
+  </nav>
+</header>
+
+<main class="about-container">
+
+  <!-- INTRO -->
+  <section class="about-card">
+    <h2>Sobre mí</h2>
+    <p>
+      Hola, soy <strong>Dylan</strong>, programador en formación en Riwi.
+      Me apasiona la tecnología, los videojuegos y el aprendizaje constante.
+    </p>
+  </section>
+
+  <!-- PROGRAMACIÓN -->
+  <section class="about-card about-flex">
+    <img src="/public/img/programmer.png" class="img-about">
+    <div>
+      <h3>Programación</h3>
+      <p>
+        Me gusta programar porque me reta a pensar diferente.
+        Es una herramienta para construir soluciones reales
+        y entender cómo funciona el mundo digital.
+      </p>
+    </div>
+  </section>
+
+  <!-- MÚSICA -->
+  <section class="about-card about-flex">
+    <img src="/public/img/can.jpeg" class="img-about">
+    <div>
+      <h3>Música</h3>
+      <p>
+        Disfruto el rock alternativo y el rap.
+        Me gusta la música con significado, como la de Canserbero,
+        que transmite emociones y reflexiones profundas.
+      </p>
+    </div>
+  </section>
+
+  <!-- VIDEOJUEGOS -->
+  <section class="about-card about-flex">
+    <img src="/public/img/iconlol.png" class="img-about">
+    <div>
+      <h3>Videojuegos</h3>
+      <p>
+        Mi juego favorito es League of Legends.
+        Me gusta por su competitividad y estrategia.
+        Es un entorno donde siempre puedes mejorar.
+      </p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p>© 2024 Dylan. Todos los derechos reservados.</p>
+</footer>
+
+<script src="/src/js/script.js"></script>
+
 </body>
 </html>

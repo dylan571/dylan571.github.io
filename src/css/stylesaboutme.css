@@ -1,138 +1,150 @@
-/* --- BASE --- */
-body {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: #f8fafc; /* Blanco azulado suave */
-    margin: 0;
-    padding: 0;
-    background-color: #0f172a; /* Azul Marino Base */
+/* --- VARIABLES --- */
+:root {
+  --bg-main: #0f172a;
+  --bg-header: #020617;
+  --accent: #10B981;
+  --text: #f8fafc;
 }
 
-/* --- CABECERA --- */
+/* --- BASE --- */
+body {
+  font-family: system-ui;
+  color: var(--text);
+  margin: 0;
+  background-color: var(--bg-main);
+}
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* --- HEADER --- */
 .header-main {
-    background-color: #020617; /* Azul profundo */
-    box-shadow: 0px 4px 15px rgba(32, 178, 170, 0.4);
-    padding: 20px;
-    border-bottom: 1px solid rgba(32, 178, 170, 0.2);
+  background-color: var(--bg-header);
+  padding: 20px;
+  box-shadow: 0px 4px 15px var(--accent);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
 }
 
 .title-main {
-    display: flex;
-    justify-content: center;
-    color: #fff;
-    font-size: 36px;
-    margin: 0px;
+  font-size: 2rem;
+}
+
+.title-second-word {
+  color: var(--accent);
 }
 
 .nav-main {
-    display: flex;
-    justify-content: center;
-    gap: 25px;
-    font-size: 20px;
-    margin-top: 25px;
+  display: flex;
+  gap: 20px;
 }
 
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* --- LINKS --- */
 a {
-    color: #cbd5e1;
-    transition: 0.3s;
-    text-decoration: none;
+  color: #cbd5e1;
+  text-decoration: none;
 }
 
 a:hover {
-    color: lightseagreen;
+  color: var(--accent);
 }
 
 /* --- CONTENEDOR --- */
-
-.main-container-about-me {
-    background: linear-gradient(180deg, #0f172a 0%, #1e293b 100%);
-    border-top: 3px solid rgba(32, 178, 170, 0.5);
+.about-container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 40px 20px;
+  display: grid;
+  gap: 25px;
 }
 
-/* --- CONTENEDOR MAIN ABOUT ME --- */
-
-.main-container-about-me {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    background-color: #1e293b; /* Azul pizarra para contraste */
-    padding: 20px;
+/* --- TARJETAS --- */
+.about-card {
+  background: #020617;
+  padding: 25px;
+  border-radius: 15px;
+  transition: 0.3s;
 }
 
-.content-about-me, .content-about-me-text {
-    background-color: #0f172a;
-    border: 1px solid rgba(32, 178, 170, 0.2);
-    font-size: 20px;
-    margin: 20px;
-    border-radius: 12px;
-    padding: 25px;
-    transition: 0.3s;
-    text-align: justify;
+.about-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 15px var(--accent);
 }
 
-.second-header, .second-header-about-me {
-    display: flex;
-    justify-content: center;
-    color: #ffffff;
-    margin-bottom: 10px;
-    width: 100%;
+/* --- FLEX SECTIONS --- */
+.about-flex {
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
-.content-about-me:hover, .content-about-me-text:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 0px 20px rgba(32, 178, 170, 0.4);
-}
-
-.second-header-about-me {
-    text-align: center;
-    color: #ffffff;
-    margin-bottom: 10px;
-    width: 100%;
-}
-
-.content-about-me-text {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 30px;
-    background-color: #0f172a;
-    font-size: 20px;
-    margin: 20px;
-    border-radius: 8px;
-    padding: 25px;
-    text-align: justify;
-}
-
-.side-left {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-width: 260px;
-}
-
-.side-right {
-    text-align: justify;
-}
-
-.content-about-me-text:hover {
-    text-decoration: none;
-    transform: scale(1.02);
-    transition: 0.3s;
-    box-shadow: lightseagreen 0px 0px 15px;
-}
-
-/* --- IMAGENES --- */ 
-.img-proyect {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    padding: 10px;
+.img-about {
+  width: 120px;
+  border-radius: 10px;
 }
 
 /* --- FOOTER --- */
 footer {
-    background-color: #020617;
-    color: #94a3b8;
+  text-align: center;
+  padding: 30px;
+  background-color: var(--bg-header);
+}
+
+/* 📱 MOBILE */
+@media (max-width: 768px) {
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-main {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    background-color: var(--bg-header);
+    padding: 20px;
     text-align: center;
-    padding: 40px;
-    border-top: 1px solid rgba(32, 178, 170, 0.2);
+  }
+
+  .nav-main.active {
+    display: flex;
+  }
+
+  .about-flex {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* 📲 TABLET */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .about-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* 💻 PC */
+@media (min-width: 1025px) {
+  .about-container {
+    grid-template-columns: 1fr;
+  }
 }
